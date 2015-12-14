@@ -403,6 +403,17 @@ function drawGiveupone () {
  image(kitchen, 0, 0);
  image(womansad, 300, 150);
  image(counter, 0, 0);
+	fill(234, random(87,234), 22, 50);
+	noStroke();
+	for(var i = 0; i < 11; i++){
+		ellipse(180 +i * 6.5, 495, 11, 11);
+	}
+		fill(234, random(87,234), 22, 50);
+	noStroke();
+	for(var i = 0; i < 11; i++){
+		ellipse(353 +i * 6.5, 495, 11, 11);
+	}
+ 
 }
 
 	
