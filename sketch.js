@@ -3,6 +3,7 @@ var positionleft = -5;
 var positionright = 800;
 var wpositionleft = -5;
 var wpositionright = 800;
+var firstposition = -5;
 var roombackground;
 var potteryone;
 var potterytwo;
@@ -45,7 +46,13 @@ var muslim;
 var hijab;
 var clothes;
 var kitchen;
-var counter
+var counter;
+var cookone;
+var cooktwo;
+var stickone;
+var sticktwo;
+var lastscene;
+var first;
 
 
 function preload() {
@@ -93,6 +100,12 @@ function preload() {
   clothes = loadImage("images/clothes.png");
   kitchen = loadImage("images/kitchen.png");
   counter = loadImage("images/counter.png");
+  cookone = loadImage("images/cookone.png");
+  cooktwo = loadImage("images/cooktwo.png");
+  stickone = loadImage("images/stickone.png");
+  sticktwo = loadImage("images/sticktwo.png");
+  lastscene = loadImage("images/lastscene.png");
+  first = loadImage("images/first.png");
 }
 
 function setup() {
@@ -117,11 +130,16 @@ function draw() {
 		drawThree();
 	}
 	cursor(HAND);
+	
+
 }
 
 
-function drawOne() {
-  //first scene - room background
+function drawOne() {  firstposition = firstposition + 2;
+	ellipse(firstposition, 10, 10, 10);
+	image(first, 0, 0);
+	if (firstposition > 600)
+	{
   image( roombackground, 0, 0);
   
   // pottery on random to show movement
@@ -142,7 +160,7 @@ function drawOne() {
 		image (closedoor, random(18,22), 30);
 	}
 }
-	
+}
 	
 	function drawOneone() {
   //first scene - room background
@@ -380,7 +398,7 @@ function drawThree () {
 	//Setup white circles
 	noFill();
 	for (var i = 0; i < 100; i++) {
-		stroke(0, random(140,230), random(90,210));
+			stroke(random(10,90));
 		strokeWeight(10);
 		ellipse(380, 310, i * 18, i * 18);
 	}
@@ -388,20 +406,28 @@ function drawThree () {
 	//Setup circles
 	noFill();
 	for (var n = 0; n < 100; n++) {
-		stroke(0, random(140, 230), random(90,210));
+		stroke(random(90,120));
 	  strokeWeight(10);
 		ellipse(380, 310, n * 36, n * 36);
 	}
-  image (womanmad, 250, 280);
+  image (lastscene,-35, 0);
 }
 		
 }
 
 
 function drawGiveupone () {
+  frameRate(5);
   // scene after clicking give up
  image(kitchen, 0, 0);
- image(womansad, 300, 150);
+ 
+ 			var cook = random(1);
+		if (cook < 0.5) {
+			image(cookone, 290, 100);
+		} else if (cook > 0.5){
+			image(cooktwo, 290, 100);
+	}
+
  image(counter, 0, 0);
 	fill(234, random(87,234), 22, 50);
 	noStroke();
@@ -413,6 +439,12 @@ function drawGiveupone () {
 	for(var i = 0; i < 11; i++){
 		ellipse(353 +i * 6.5, 495, 11, 11);
 	}
+		if (cook < 0.5) {
+		image(stickone, 372, 410);
+		}else if (cook > 0.5){
+		image(sticktwo, 405, 390);
+		}
+
  
 }
 
