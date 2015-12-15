@@ -135,11 +135,14 @@ function draw() {
 }
 
 
-function drawOne() {  firstposition = firstposition + 2;
+function drawOne()
+// adding an introduction page
+{  firstposition = firstposition + 2;
 	ellipse(firstposition, 10, 10, 10);
 	image(first, 0, 0);
-	if (firstposition > 600)
+	if (firstposition > 500)
 	{
+	  // first scene of the story 
   image( roombackground, 0, 0);
   
   // pottery on random to show movement
@@ -198,6 +201,7 @@ function drawOneoneone() {
 	  strokeWeight(10);
 		ellipse(380, 310, n * 36, n * 36);
 	}
+	//add images and options 
   image (womansad, 250, 280);
   image (bedaring, 100, 110);
   image (or, 340, 130);
@@ -209,7 +213,7 @@ function drawTwo () {
   // scene after clicking be daring;
   frameRate (5);
   image (riyadhbackground, 0, 0);
-  
+  // animating walking men
   positionleft = positionleft + 10;
   positionright = positionright -8;
   
@@ -284,11 +288,11 @@ function drawTwo () {
 		}
 		
 		image (womanback, 198, 200);
-
+// moving to next page
 				if (positionright < 400) {
 				  scale (0.9,0.9);
 			background(140, 134, 169);
-	//Setup white circles
+	//Setup circles
 	noFill();
 	for (var i = 0; i < 100; i++) {
 		stroke(0, random(140,230), random(90,210));
@@ -296,13 +300,14 @@ function drawTwo () {
 		ellipse(380, 310, i * 18, i * 18);
 	}
 
-	//Setup circles
+	//Setup more circles
 	noFill();
 	for (var n = 0; n < 100; n++) {
 		stroke(0, random(140, 230), random(90,210));
 	  strokeWeight(10);
 		ellipse(380, 310, n * 36, n * 36);
 	}
+	// adding image and options to move to next pages
   image (womanmad, 250, 280);
   image (bebrave, 100, 110);
   image (or, 340, 130);
@@ -316,7 +321,7 @@ function drawThree () {
   frameRate (5);
   image (worldbackground, 0, 0);
   
-  
+  // animating walking people
   wpositionleft = wpositionleft + 10;
   wpositionright = wpositionright -8;
   
@@ -391,11 +396,11 @@ function drawThree () {
 		}
 		image (womanback, 198, 200);
 		
-		
+		// moving to the last scene
 				if (wpositionright < 400) {
 				  scale (0.9,0.9);
 			background(140, 134, 169);
-	//Setup white circles
+	//Setup circles
 	noFill();
 	for (var i = 0; i < 100; i++) {
 			stroke(random(10,90));
@@ -420,7 +425,7 @@ function drawGiveupone () {
   frameRate(5);
   // scene after clicking give up
  image(kitchen, 0, 0);
- 
+ // animate woman stirring 
  			var cook = random(1);
 		if (cook < 0.5) {
 			image(cookone, 290, 100);
@@ -448,7 +453,7 @@ function drawGiveupone () {
  
 }
 
-	
+	// manage moving through pages when clicking the mouse
   function mouseReleased() {
 	if (currentScene === "one"
 	&& mouseY < 400
