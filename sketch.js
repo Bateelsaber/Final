@@ -460,8 +460,8 @@ function drawThree () {
 		strokeWeight(10);
 		ellipse(380, 310, i * 18, i * 18);
 	}
-
-	//Setup circles
+	
+// animate explosion
 
 	  lastposition = lastposition + 46;
 	ellipse(lastposition, 10, 10, 10);
@@ -472,7 +472,7 @@ function drawThree () {
 	  strokeWeight(10);
 		ellipse(380, 310, n * 36, n * 36);
 	}
-	
+	// placing last scene image 
   image (lastscene,-35, 0);
 
 	if (lastposition >-300
@@ -601,6 +601,7 @@ function drawThree () {
 	}
 					else	if (lastposition >1000)	
 	{
+	  // image of the ending scene
  image (end, -30, 0);
 	}
 }}
