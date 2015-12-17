@@ -4,6 +4,7 @@ var positionright = 800;
 var wpositionleft = -5;
 var wpositionright = 800;
 var firstposition = -5;
+var lastposition = -300;
 var roombackground;
 var potteryone;
 var potterytwo;
@@ -53,6 +54,30 @@ var stickone;
 var sticktwo;
 var lastscene;
 var first;
+var eone;
+var etwo;
+var ethree;
+var efour;
+var efive;
+var esix;
+var eseven;
+var eeight;
+var enine;
+var eten;
+var eeleven;
+var etwelve;
+var ethirteen;
+var efourteen;
+var efifteen;
+var esixteen;
+var eseventeen;
+var eeighteen;
+var eninteen;
+var etwenty;
+var etwentyone;
+var etwentytwo;
+var etwentythree;
+var etwentyfour;
 
 
 function preload() {
@@ -106,6 +131,30 @@ function preload() {
   sticktwo = loadImage("images/sticktwo.png");
   lastscene = loadImage("images/lastscene.png");
   first = loadImage("images/first.png");
+  eone = loadImage("images/eone.png");
+  etwo = loadImage("images/etwo.png");
+  ethree = loadImage("images/ethree.png");
+  efour = loadImage("images/efour.png");
+  efive = loadImage("images/efive.png");
+  esix = loadImage("images/esix.png");
+  eseven = loadImage("images/eseven.png");
+  eeight = loadImage("images/eeight.png");
+  enine = loadImage("images/enine.png");
+  eten = loadImage("images/eten.png");
+  eeleven = loadImage("images/eeleven.png");
+  etwelve = loadImage("images/etwelve.png");
+  ethirteen = loadImage("images/ethirteen.png");
+  efourteen = loadImage("images/efourteen.png");
+  efifteen = loadImage("images/efifteen.png");
+  esixteen = loadImage("images/esixteen.png");
+  eseventeen = loadImage("images/eseventeen.png");
+  eeighteen = loadImage("images/eeighteen.png");
+  eninteen = loadImage("images/eninteen.png");
+  etwenty = loadImage("images/etwenty.png");
+  etwentyone = loadImage("images/etwentyone.png");
+  etwentytwo = loadImage("images/etwentytwo.png");
+  etwentythree = loadImage("images/etwentythree.png");
+  etwentyfour = loadImage("images/etwentyfour.png");
 }
 
 function setup() {
@@ -409,17 +458,145 @@ function drawThree () {
 	}
 
 	//Setup circles
-	noFill();
+
+	  lastposition = lastposition + 46;
+	ellipse(lastposition, 10, 10, 10);
+	
+		noFill();
 	for (var n = 0; n < 100; n++) {
 		stroke(random(90,120));
 	  strokeWeight(10);
 		ellipse(380, 310, n * 36, n * 36);
 	}
+	
   image (lastscene,-35, 0);
-}
-		
-}
 
+	if (lastposition >-200
+	&& lastposition < -150)
+ {
+	  image(eone, 240, -200);
+}
+	else	if (lastposition >-155
+	&& lastposition < -100)	
+	{25
+	  image(etwo, 240, -220);
+	}
+		else	if (lastposition >-105
+	&& lastposition < -50)	
+	{
+	  image(ethree, 230, -230);
+	}
+		else	if (lastposition >-55
+	&& lastposition < 0)	
+	{
+	  image(efour, 230, -230);
+	}
+		else	if (lastposition >-5
+	&& lastposition < 50)	
+	{
+	  image(efive,230, -230);
+	}
+			else	if (lastposition >45
+	&& lastposition < 100)	
+	{
+	  image(esix,230, -230);
+	}
+			else	if (lastposition >95
+	&& lastposition < 150)	
+	{
+	  image(eseven,230, -230);
+	}
+				else	if (lastposition >145
+	&& lastposition < 200)	
+	{
+	  image(eeight,220, -230);
+	}
+				else	if (lastposition >195
+	&& lastposition < 250)	
+	{
+	  image(enine,220, -230);
+	}
+				else	if (lastposition >245
+	&& lastposition < 300)	
+	{
+	  image(eten,220, -230);
+	}
+					else	if (lastposition >295
+	&& lastposition < 350)	
+	{
+	  image(eeleven,220, -230);
+	}
+					else	if (lastposition >345
+	&& lastposition < 400)	
+	{
+	  image(etwelve,210, -230);
+	}
+					else	if (lastposition >395
+	&& lastposition < 450)	
+	{
+	  image(ethirteen,210, -230);
+	}
+					else	if (lastposition >445
+	&& lastposition < 500)	
+	{
+	  image(efourteen,210, -230);
+	}
+					else	if (lastposition >495
+	&& lastposition < 550)	
+	{
+	  image(efifteen,200, -230);
+	}
+					else	if (lastposition >545
+	&& lastposition < 600)	
+	{
+	  image(esixteen,200, -230);
+	}
+					else	if (lastposition >595
+	&& lastposition < 650)	
+	{
+	  image(eseventeen,200, -230);
+	}
+					else	if (lastposition >645
+	&& lastposition < 700)	
+	{
+	  image(eeighteen,200, -230);
+	}
+					else	if (lastposition >695
+	&& lastposition < 750)	
+	{
+	  image(eninteen,200, -230);
+	}
+					else	if (lastposition >745
+	&& lastposition < 800)	
+	{
+	  image(etwenty,210, -230);
+	}
+					else	if (lastposition >795
+	&& lastposition < 850)	
+	{
+	  image(etwentyone,210, -230);
+	}
+					else	if (lastposition >845
+	&& lastposition < 900)	
+	{
+	  image(etwentytwo,220, -230);
+	}
+					else	if (lastposition >895
+	&& lastposition < 950)	
+	{
+	  image(etwentythree,220, -230);
+	}
+					else	if (lastposition >945
+	&& lastposition < 1000)	
+	{
+	  image(etwentyfour,250, -230);
+	}
+					else	if (lastposition >1000)	
+	{
+	  fill(0);
+	  rect (0, 0, 800, 600);
+	}
+}}
 
 function drawGiveupone () {
   frameRate(5);
