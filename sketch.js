@@ -577,12 +577,12 @@ function drawThree () {
 					else	if (lastposition >745
 	&& lastposition < 800)	
 	{
-	  image(etwenty,210, -230);
+	  image(etwenty,200, -230);
 	}
 					else	if (lastposition >795
 	&& lastposition < 850)	
 	{
-	  image(etwentyone,210, -230);
+	  image(etwentyone,200, -230);
 	}
 					else	if (lastposition >845
 	&& lastposition < 900)	
