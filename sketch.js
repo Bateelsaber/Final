@@ -78,6 +78,8 @@ var etwentyone;
 var etwentytwo;
 var etwentythree;
 var etwentyfour;
+var brain;
+var end;
 
 
 function preload() {
@@ -155,6 +157,8 @@ function preload() {
   etwentytwo = loadImage("images/etwentytwo.png");
   etwentythree = loadImage("images/etwentythree.png");
   etwentyfour = loadImage("images/etwentyfour.png");
+  brain = loadImage("images/brain.png");
+  end = loadImage("images/end.png")
 }
 
 function setup() {
@@ -189,7 +193,7 @@ function drawOne()
 {  firstposition = firstposition + 2;
 	ellipse(firstposition, 10, 10, 10);
 	image(first, 0, 0);
-	if (firstposition > 500)
+	if (firstposition > 450)
 	{
 	  // first scene of the story 
   image( roombackground, 0, 0);
@@ -471,7 +475,11 @@ function drawThree () {
 	
   image (lastscene,-35, 0);
 
-	if (lastposition >-200
+	if (lastposition >-300
+	&& lastposition < -100) {
+	image (brain, 240, 290);
+	}
+	 else if (lastposition >-200
 	&& lastposition < -150)
  {
 	  image(eone, 240, -200);
@@ -593,8 +601,7 @@ function drawThree () {
 	}
 					else	if (lastposition >1000)	
 	{
-	  fill(0);
-	  rect (0, 0, 800, 600);
+ image (end, -30, 0);
 	}
 }}
 
